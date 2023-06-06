@@ -122,7 +122,7 @@ worldmap +
 
 ```
 
-# 4. Gif showing yearly evolution of attacks by location
+# 4. Gif showing yearly evolution of casualties and wounded
 ```{r, message=FALSE, warning=FALSE, results='hide'}
 # Obtaining the data for plotting
 giffer <- df %>%
@@ -131,7 +131,7 @@ giffer <- df %>%
 # Creating base layer plus the title
 plot <- ggplot() +
   borders("world", colour = "white", fill = "lightgray") +
-  labs(title = "Worldwide Terrorist attacks in the year of {closest_state}")
+  labs(title = "Worldwide casualties and wounded related to terorist attacks in the year of {closest_state}")
 
 # Adding the points layer (frame argument for the animation)
 plot <- plot + 
