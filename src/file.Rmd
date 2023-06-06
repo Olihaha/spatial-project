@@ -150,7 +150,7 @@ plot
 
 ![](giffy.gif)
 
-# 5. Chlorograph map displaying amount of attacks
+# 5. Choropleth map displaying amount of attacks
 ```{r, message=FALSE, warning=FALSE}
 world_spdf <- readOGR(dsn=path.expand("../data/world_shape_file"), layer="TM_WORLD_BORDERS_SIMPL-0.3", verbose=FALSE)
 
@@ -216,7 +216,7 @@ map
 
 ```
 
-# 6. Chlorograph map based on popluation
+# 6. Choropleth map based on popluation
 ```{r, message=FALSE, warning=FALSE}
 #world_spdf <- readOGR(dsn=path.expand("../data/world_shape_file"), layer="TM_WORLD_BORDERS_SIMPL-0.3", verbose=FALSE)
 #world_spdf@data$POP2005[ which(world_spdf@data$POP2005 == 0)] = NA
@@ -261,7 +261,7 @@ map
 
 ```
 
-# 7. Chloropgraph map showing killed by country
+# 7. Choropleth map showing killed by country
 ```{r, message=FALSE, warning=FALSE}
 killed <- df %>%
   group_by(country_txt) %>%
@@ -324,7 +324,7 @@ map
 
 ```
 
-# 8. Chlorograph map showing killed pr 10000 people
+# 8. Choropleth map showing killed pr 10000 people
 ```{r, message=FALSE, warning=FALSE}
 #world_spdf <- readOGR(dsn=path.expand("../data/world_shape_file"), layer="TM_WORLD_BORDERS_SIMPL-0.3", verbose=FALSE)
 dd@data$POP2005 <- as.numeric(as.character(dd@data$POP2005)) 
@@ -365,7 +365,7 @@ map
 
 ```
 
-# 9. Chlorograph map displaying "succes_rate" based on country
+# 9. Choropleth map displaying "succes_rate" based on country
 ```{r, message=FALSE, warning=FALSE}
 success <- df %>%
   group_by(country_txt) %>%
